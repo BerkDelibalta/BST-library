@@ -7,7 +7,6 @@
 typedef struct node_t{
 
     int value;
-    int N;
     struct node_t * parent;
     struct node_t * right;
     struct node_t * left;

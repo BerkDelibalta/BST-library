@@ -194,7 +194,7 @@ node_s * select_the_kth_smallest_key(node_s * root,int k){
     if(root==NULL)
         return NULL;
 
-    t=(root->left==NULL) ? 0 : root->left->N;
+    t=(root->left==NULL) ? 0 : size(root->left);
 
     if(k<t) {
         return select_the_kth_smallest_key(root->left, k);
@@ -215,7 +215,7 @@ node_s * partition_node(node_s * root,int k){
     if(root==NULL)
         return NULL;
 
-    t=(root->left==NULL) ? 0 : root->left->N;
+    t=(root->left==NULL) ? 0 : size(root->left);
     if(k<t){
         root->left= partition_node(root->left,k);
         root= rotate_right(root);
@@ -294,7 +294,7 @@ int size(node_s * x){
     if(x==NULL)
         return 0;
 
-    return x->N;
+    return (size(x->left)+1+ size(x->right));
 
 }
 
