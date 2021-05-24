@@ -41,7 +41,7 @@ node_s * create_new_node(node_s * root,int value){
     }
 
     root->value=value;
-    root->parent=root;
+    root->parent=NULL;
     root->right=NULL;
     root->left=NULL;
 
@@ -208,14 +208,23 @@ node_s * select_the_kth_smallest_key(node_s * root,int k){
 
 }
 
+
+
 node_s * partition_node(node_s * root,int k){
 
     int t;
 
-    if(root==NULL)
-        return NULL;
+    node_s * node;
 
-    t=(root->left==NULL) ? 0 : size(root->left);
+    node=select_the_kth_smallest_key(root,k);
+
+    if(node==NULL){
+        fprintf(stderr,"ERROR:the key is not existing!\n");
+        return NULL;
+    }
+
+    t= size(root->left);
+
     if(k<t){
         root->left= partition_node(root->left,k);
         root= rotate_right(root);

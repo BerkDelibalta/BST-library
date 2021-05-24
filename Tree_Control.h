@@ -13,7 +13,6 @@
 #define MAX_BUFFER 30
 
 
-
 void Tree_control(){
 
     node_s * root=NULL;
