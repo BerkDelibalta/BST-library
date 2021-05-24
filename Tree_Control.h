@@ -28,8 +28,7 @@ void Tree_control(){
         fprintf(stdout,"max            -find the maximum root in the bst tree\n");
         fprintf(stdout,"successor      -find the successor of a root\n");
         fprintf(stdout,"predecessor    -find the predecessor of a root\n");
-       //The related solution for the pointer-management resourced problems will be provided soon
-        // fprintf(stdout,"partition      -partition the kth smallest value to the root\n");
+        fprintf(stdout,"partition      -partition the kth smallest value to the root\n");
         fprintf(stdout,"kth            -find the Kth smallest value in the bst tree\n");
         fprintf(stdout,"size           -find the size of the sub-trees connected to a node\n");
         fprintf(stdout,"rank           -find the rank of a root\n");
