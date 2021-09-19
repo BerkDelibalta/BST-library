@@ -9,7 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Tree_Prototypes.h"
-#include "Tree_Private_Functionalities.h"
+#include "Tree_Private_Functionalities.c"
 #define MAX_BUFFER 30
 
 
